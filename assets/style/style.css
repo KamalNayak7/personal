@@ -1,0 +1,626 @@
+html,
+ body {
+padding: 0;
+margin:0;
+
+ }
+
+ *{
+   font-family: Arial, Helvetica, sans-serif;
+   box-sizing: border-box;
+   
+  }
+
+  h3{
+   color:#e5e5e5;
+   
+ }
+  h3:hover{
+   color:white;
+   font-size: 20px;
+   cursor:pointer;
+ }
+ a {
+ text-decoration:none;
+ color: #0654ba;
+
+ }
+  .wrapper{
+     min-width: 1050px;
+     min-height: 100%;
+    
+    
+  }
+.signInContainer{
+   background-image:url('../images/background.jpg');
+   background-size: 100% 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+ 
+   
+}
+
+.column{
+   background-color: black;
+   opacity:0.9;
+   min-height: auto;
+   width: 450px;
+   box-shadow: rgba(0,0,0, 0.5) 0 50px 50px;
+   padding: 5px 5px;
+ 
+}
+
+.column form{
+   overflow-y: auto;
+   display: flex;
+   flex-direction: column;
+}
+
+.column form input[type="text"],
+.column form input[type="email"],
+.column form input[type="number"],
+.column form input[type="password"]{
+   text-align:center;
+   background-color:rgb(230, 238, 243);
+   font-size: 20px;
+   margin: 10px ;
+   border: none;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 5px;
+   height: 40px;
+   width: 350px;
+   opacity: 0.99;
+   font-weight: 400;
+ 
+}
+::-webkit-input-placeholder{
+  color: black;
+}
+
+:-ms-input-placeholder{
+   color: black;
+}
+::-moz-placeholder{
+   color:black;
+}
+:-moz-placeholder{
+   color: black;
+   opacity: 0.999;
+ 
+}
+
+.column form input[type="submit"]{
+   background-color: brown;
+   color: white;
+   height:55px;
+   width: auto;
+   margin:29px;
+   border-radius: 5px;
+   border: none;
+   font-size: 25px;
+   font-weight:525;
+}
+
+.column .header{
+  padding: 2px;
+  position: relative;
+  top:80px;
+
+  
+}
+
+.column h3{
+   font-weight:500;
+   font-size: 28px;
+   margin: 0;
+   opacity: 1;
+   position: relative;
+   bottom: 70px;
+
+}
+
+.column .header span{
+    
+    font-weight: 500;
+    opacity: 1;
+    position: relative;
+    bottom: 70px;
+}
+
+.column .header img{
+   width: 130px;
+   position: relative;
+    bottom: 50px;
+    left: 150px;
+}
+ 
+.signInMessage{
+   color: white;
+   position: relative;
+   bottom: 4px;
+   font-weight: 400;
+   }
+ 
+
+.previewVideo{
+   width:100%;
+   height:100% ;
+  
+   
+}
+.previewImage{
+   width: 100%;
+   height:800px;
+}
+
+.previewContainer{
+   position: relative;
+   display: flex;
+   object-fit: cover;
+ }
+
+ .previewContainer.small{
+   margin-right: 4px;
+   display: inline-flex;
+   flex-direction: column;
+   margin-top: 10px;
+   margin-left: 25px;
+   cursor: pointer;
+   border: none;
+   outline: black;
+   justify-content:center;
+   
+}
+
+.previewContainer.small .contents {
+   display: flex;
+   flex-direction: column;
+   width: 330px;
+  
+}
+
+.previewContainer.small .buyButton button{
+   width: 100%;
+   background-color:brown;
+   color: white;
+   font-size: 15px;
+   border: none;
+   cursor: pointer;
+   outline: none;
+   padding: 10px;
+   opacity: 0.9;
+   
+}
+
+ .previewContainer.small .previewVideoTrailer{
+    width: 100%;
+    height: 259px;
+    cursor: pointer;
+    object-fit: fill;
+    border: none;
+    outline: black;
+    
+    }
+
+  .previewContainer.small video:hover{
+     transform: scale(1.2);
+     z-index: 2;
+     box-shadow: 0px 2px 20px black;
+     cursor: pointer;
+     border: none;
+     outline: black;
+     
+  }
+
+
+.previewOverlay{
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.3);
+   position: absolute;
+}
+
+.previewOverlay .mainDetails h3{
+   font-size: 40px;
+   margin: 15px 0;
+   color: white;
+   cursor: pointer;
+}
+.previewOverlay .mainDetails h4{
+   font-size: 15px;
+   margin: 5px 0;
+   opacity: 0.7;
+   color: white;
+   cursor: pointer;
+  }
+  .previewOverlay .mainDetails h4:hover{
+   font-size: 17px;
+   color: white;
+   opacity: 0.9;
+  }
+
+.previewOverlay .mainDetails{
+   position: relative;
+   top: 35%;
+   margin-left: 50px;
+   display: flex;
+   flex-direction: column;
+}
+
+.mainDetails button{
+   background-color: rgba(51,51,51,0.4);
+   color: #fff;
+   border: none;
+   min-width: 150px;
+   padding: 0 38px;
+   height: 50px;
+   max-height: 50px;
+   font-size: 18px;
+   border-radius: 2px;
+   margin-bottom: 15px;
+   margin-right: 5px;
+   cursor: pointer;
+}
+button i{
+   color:brown;
+   font-size: 25px;
+}
+
+.mainDetails .buttons :hover{
+   background-color:#e6e6e6 ;
+   color:brown;
+}
+
+.category{
+   display:flex;
+   flex-direction:column;
+   padding-left: 30px;
+   padding-bottom: 40px;
+   text-decoration: none;
+ }
+ .category h3{
+   color: brown;
+   font-size: 22px;
+   margin-top: 20px;
+ }
+
+ .category h3:hover{
+  font-size: 25px;
+  }
+
+
+ 
+ .entities {
+   overflow-x:auto;
+   overflow-y:hidden;
+   white-space:nowrap;
+ }
+
+ .previewCategories{
+    padding: 0 50px;
+ }
+
+ .errorBanner{
+   color: white;
+   position: absolute;
+   top: 25%;
+   width: 100%;
+   text-align: center;
+   font-size: 20px;
+}
+
+.season{
+   display:flex;
+   flex-direction:column;
+   padding:20px 60px;
+ 
+ }
+ .videos{
+   overflow-x:auto;
+   overflow-y:hidden;
+   white-space:nowrap;
+ }
+
+ .episodeContainer{
+   display:inline-flex;
+   justify-content:center;
+   margin-right:4px;
+ }
+ 
+ .episodeContainer .contents{
+   display:flex;
+   flex-direction:column;
+   width:230px;
+   position: relative;
+ 
+ }
+ .episodeContainer img{
+   width:230px;
+   height:129px;
+   object-fit:cover;
+   
+ }
+ .episodeContainer .videoInfo h4,
+.episodeContainer .videoInfo span
+{
+color:white;
+width:100%;
+white-space:normal;
+}
+.episodeContainer .videoInfo{
+   max-height:200px;
+   overflow-y:auto;
+ }
+ 
+ .watchContainer video{
+    width: 100%;
+    outline: none;
+ }
+
+ .videoControls{
+   position: absolute;
+   width: 100%;
+   z-index: 1;
+   display:inline-flex;
+   align-items: center;
+   background-color: rgba(0,0,0,0.3);
+ }
+
+ .videoControls h1{
+    color: brown;
+    font-size: 50px;
+ }
+ .videoControls .iconButton{
+   padding: 50px;
+   color: brown;
+   background-color: transparent;
+   border: none;
+   outline: none;
+ }
+
+ .videoControls .iconButton i{
+    font-size: 50px;
+    background-color: transparent ;
+ }
+
+ .videoControls .iconButton :hover{
+    cursor: pointer;
+   transform: scale(1.2);
+ }
+
+ .upNext {
+    height: 100%;
+   justify-content: center;
+ }
+
+ .upNextContainer{
+    color:whitesmoke
+ }
+
+ .upNextContainer button{
+    padding:0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color:whitesmoke;
+    font-size: 40px;
+ }
+
+ .upNextContainer .redoIcon i{
+    font-size: 50px;
+    background-color: transparent;
+    outline: transparent;
+    border: none;
+    
+ }.upNextContainer .redoIcon :hover{
+   transform: scale(1.2);
+    cursor: pointer;
+ }
+
+ .upNextContainer .playIcon i{
+   font-size: 40px;
+  
+}.upNextContainer .playIcon :hover{
+   transform: scale(1.2);
+   cursor: pointer;
+  
+}
+
+
+
+ .upNextContainer h2,
+ .upNextContainer h3{
+    color:whitesmoke;
+ }
+
+ .watchNav{
+    z-index: 2;
+ }
+
+ .seen {
+   color: brown;
+   font-size: 24px;
+   position: absolute;
+   top: 5px;
+   left: 5px;
+ }
+
+ .topBar{
+   position: fixed;
+   width: 100%;
+   z-index: 1;
+   display: flex;
+   align-items: center;
+   padding: 0 60px;
+   height: 60px;
+   box-sizing: border-box;
+   min-width: 1050px;
+   transition: background-color 200ms linear;
+ }
+
+ .topBar.scrolled{
+    background-color: brown;
+    opacity: 0.9;
+    transition: background-color 200ms linear;
+
+ }
+ .logoContainer{
+    height: 50px;
+ }
+
+
+
+ .logoContainer img{
+    width :60px;
+    height: 50px;
+
+ }
+
+ .navLinks{
+   display: flex;
+   list-style: none;
+ }
+
+ .navLinks a{
+   color: white;
+   font-size: 15px;
+   font-weight: 800;
+   margin-left: 20px;
+}
+
+.rightItems{
+   text-align: right;
+   flex:1 ;/*  takes all of the space between the elements to its left*/
+}
+ 
+.rightItems i{
+   color: white;
+   font-size: 20px;
+   margin-left: 10px;
+}
+
+.previewCategories h1{
+ color: brown;
+}
+
+.textBoxContainer{
+   padding: 100px 50px;
+}
+
+.searchInput::-webkit-input-placeholder {
+   /* WebKit, Blink, Edge */
+   color:brown;
+}
+.searchInput:-moz-placeholder {
+   /* Mozilla Firefox 4 to 18 */
+   color:brown;
+   opacity: 1;
+}
+.searchInput::-moz-placeholder {
+   /* Mozilla Firefox 19+ */
+   color:brown;
+   opacity: 1;
+}
+.searchInput:-ms-input-placeholder {
+   /* Internet Explorer 10-11 */
+   color:brown;
+}
+
+.searchInput{
+   height: 50px;
+   width: 600px;
+   border: 1px solid white;
+   background-color: transparent;
+   color: #fff;
+   font-size: 20px;
+   padding: 5px 10px;
+   border-radius: 10px;
+}
+
+.settingsConatiner{
+    
+      padding-top: 60px;
+      background-color: transparent;
+      margin-left: auto;
+      margin-right: auto;
+}
+
+.settingsConatiner h2{
+   color: white;
+   margin-top: 0;
+}
+
+.settingsConatiner .formSection{
+   display: flex;
+   flex-direction: column;
+   margin: 15px 5px;
+   border-bottom: 1px solid brown;
+   padding-bottom: 15px;
+}
+
+.settingsConatiner form input[type="text"],
+.settingsConatiner form input[type="email"],
+.settingsConatiner form input[type="password"]{
+   font-size: 16px;
+   border: none;
+}
+
+.alertSuccess,
+.alertError{
+   margin: 10px 0;
+}
+
+.alertError{
+   color: red;
+}
+
+.alertSuccess{
+   color:#2ecc71;
+}
+
+.formSection h3{
+   padding-top: 60px;
+    font-size: 20px;
+    color: white;
+
+}
+
+.paymentInfoContainer{
+   padding-top: 60px;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: transparent;
+   color: white;
+}
+
+.paymentInfoContainer h2{
+   color: white;
+  
+}
+
+.paymentInfoContainer form  input[type="text"]{
+background-color: whitesmoke;
+}
+ .paymentInfoContainer  .buyButton{
+   color:white;
+   background-color:brown;
+   text-align:center;
+   font-size: 27px;
+   margin: 10px ;
+   border: none;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 5px;
+   height: 35px;
+   width: 400px;
+   font-weight: 400;
+   cursor: pointer;
+   
+}
+
+
+
